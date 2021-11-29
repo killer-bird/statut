@@ -1,3 +1,64 @@
-h1{
-    color: red;
+@import 'normalize.css/normalize';
+
+
+// MIXINS
+@mixin roboto {
+    font-family: 'Roboto', 'sans-serif';
+}
+// VARIABLES
+$base-bg:#FFFFFF;
+$color80:rgba(28, 41, 77, 0.8);
+$color100:rgb(28, 41, 77);
+$f-regular:400;
+$f-medium:500;
+$f-bold:700;
+
+body{
+    display: flex;
+    max-width: 1366px;
+    background: #E5E5E5;
+    @include roboto()
+}
+.container{
+    padding: 0 113px;
+}
+// HEADER
+header{
+    width: 100%;
+    font-size: 14px;
+    font-weight: $f-regular;
+    background: #FFFF;
+    .header_referense_wrapper{
+        border-bottom: 1px solid #DFE0E1;
+    
+    }
+    
+    .header_reference_inner{
+        display: flex;
+        justify-content: space-between;
+        padding: 17px 0;
+        .header_section{
+            display: flex;
+            .icon{
+                display: inline-block;
+                margin-right: 8px;
+                &:last-child{
+                    margin-left: 6px;
+                    position: relative;
+                    top: 1px;
+                }
+            }
+            span{
+                color: $color80;
+                font-weight: 400;
+            }
+            .reference_item{
+                margin-right: 31px;
+                display: flex;
+                align-items: center;
+            }
+        }
+       
+        
+    }
 }

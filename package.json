@@ -19,6 +19,11 @@
     "gulp-file-include": "^2.3.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-sass": "^5.0.0",
+    "node-normalize-scss": "^8.1.2",
     "sass": "^1.43.5"
+  },
+  "dependencies": {
+    "normalize-scss": "^7.0.1",
+    "normalize.css": "^8.0.1"
   }
 }

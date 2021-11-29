@@ -18,11 +18,17 @@ function html(){
   .pipe(gulp.dest('dist'))
 }
 function scss(){
-  return gulp.src('src/scss/**.scss')
-  .pipe(sass())
+  return gulp.src(['src/scss/**.scss', 'node_modules/'])
+  .pipe(sass({
+    includePaths: ['node_modules'] 
+  }))
   .pipe(csso())
   .pipe(concat('index.css'))
-  .pipe(gulp.dest('dist'))
+  .pipe(gulp.dest('dist/css'))
+}
+function images(){
+  return gulp.src(['src/img/png/**.png'])
+  .pipe(gulp.dest('dist/images'))
 }
 function clear(){
   return del('dist')
@@ -31,10 +37,10 @@ function serve(){
   sync.init({
     server:'./dist'
   })
-  gulp.watch('index.html', series(clear,html)).on('change', sync.reload)
-  gulp.watch('src/scss/**.scss', series(clear,scss)).on('change', sync.reload)
-  
+  gulp.watch(['index.html', 'src/includes/**.html'], series(clear,scss,html)).on('change', sync.reload)
+  gulp.watch('src/scss/**.scss', series(clear,scss,html)).on('change', sync.reload)
 }
-exports.build = gulp.series(clear, scss, html)
-exports.serve = series(clear, scss, html, serve)
+
+exports.build = gulp.series(clear, scss, html, images)
+exports.serve = series(clear, scss, html, serve, images)
 exports.clear = clear
