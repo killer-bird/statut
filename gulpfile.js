@@ -27,8 +27,8 @@ function scss(){
   .pipe(gulp.dest('dist/css'))
 }
 function images(){
-  return gulp.src(['src/img/png/**.png'])
-  .pipe(gulp.dest('dist/images'))
+  return gulp.src(['src/img/**'])
+  .pipe(gulp.dest('dist/img'))
 }
 function clear(){
   return del('dist')
@@ -37,10 +37,10 @@ function serve(){
   sync.init({
     server:'./dist'
   })
-  gulp.watch(['index.html', 'src/includes/**.html'], series(clear,scss,html)).on('change', sync.reload)
-  gulp.watch('src/scss/**.scss', series(clear,scss,html)).on('change', sync.reload)
+  gulp.watch(['index.html', 'src/includes/**.html'], series(clear,scss,html, images )).on('change', sync.reload)
+  gulp.watch('src/scss/**.scss', series(clear,scss,html, images)).on('change', sync.reload)
 }
 
 exports.build = gulp.series(clear, scss, html, images)
-exports.serve = series(clear, scss, html, serve, images)
-exports.clear = clear
+exports.serve = series(clear, scss, html,images, serve, )
+
