@@ -49,17 +49,105 @@ body{
     background: #E5E5E5;
     @include roboto();
     .button_icon{
-        margin-right: 7px;
+        margin-right: 6px;
     }
 }
 body a{
     text-decoration: none;
 }
+
 .container{
     margin: 0 auto;
     max-width: 1140px;
     
 }
+h3{
+    margin: 0;
+    font-size: 20px;
+}
+.button{
+    height: 40px;
+    display: flex;
+    background: #ffff;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.bookCard{
+    
+    padding: 22px 20px;
+    background: #FFFF;
+    border-radius: 5px;
+    p{  
+        margin: 0;
+        margin-bottom: 5px;
+    }
+
+    .bookCard_caption{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    h4{
+        margin: 0;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .timer{
+        background:rgba(255, 122, 0, 0.15);
+        padding: 5px 10px;
+        font-size: 12px;
+        border-radius: 5px;
+        color: #FF7A00;
+        
+    }
+    .bookCard_image{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 19px;
+        
+    }
+    .bookCard_section{
+        color: $color50;
+        font-size: 12px;
+    }
+    .bookCard_name{
+        font-size: 14px;
+        line-height: 19px;
+        margin-bottom: 10px;
+    }
+    .bookCard_author{
+        font-size: 12px;
+        margin-bottom: 7px;
+    }
+    .bookCard_price{
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 13px;
+    }
+    .bookCard_buttons{
+        display: flex;
+        button:nth-child(1){
+            margin-right: 10px;
+        }
+    }
+   
+    .card_button{
+        justify-content: center;
+        
+        width: 146px;
+        font-family: 'Roboto';
+        border-color: #EEEE;
+        
+    }
+   
+    
+}
+
 // HEADER
 header{
     width: 100%;
@@ -111,7 +199,7 @@ header{
         padding: 20px 0 0;
         display: flex;
         box-sizing: content-box;
-        height: 40;
+        height: 40px;
         justify-content: space-between;
         .main_logo{
             margin-right: 30px;
@@ -129,7 +217,6 @@ header{
             }
             .submit{
                 position: absolute;
-                display: flex;
                 right: 0;
                 bottom: 0;
                 align-items: center;
@@ -169,8 +256,8 @@ header{
                     box-sizing: content-box;
                     border-radius: 50%;
                     padding: 2px;
-                    left: 12px;
-                    bottom: 14px;
+                    left: 11px;
+                    top: 3px;
                 }
             }
         }
@@ -207,7 +294,7 @@ main{
             }
             .slider{
                 position: relative;
-                margin-bottom: 25px;
+                margin-bottom: 26px;
                .slider_item img{
                     border-radius: 5px;
                }
@@ -239,10 +326,14 @@ main{
                        
                     }
                     .--active{background: #ffff;}
-
+                    
                    
                 }
 
+
+            }
+            .bookOfDay{
+                .bookCard{width: 360px;}
             }
             .promotions{
                 display: flex;
@@ -250,72 +341,88 @@ main{
                 
                 .promotion{
                     @include gosha();
+                    position: relative;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    
                     font-size: 20px;
                     width: 360px;
                     height: 140px;
                     border-radius: 5px;
+                    .promotion_text{
+                        position: relative;
+                        z-index: 2;
+                    }
+                    .promotion_line{
+                        position: absolute;
+                        z-index: 1;
+                    }
+                    
                     &:nth-child(1){
                         background: #6D378F;
                         color: #FFFFFF;
                         margin-right: 30px;
+                        .promotion_text{
+            
+                            margin-right: 12px;
+                           
+                        }
+                        .promotion_line{
+                            left: 13px;
+                            top: 32px;
+                        }
                     }
                     &:nth-child(2){
+                        .promotion_text{
+                            margin-right: 24px;
+    
+                        }
+                        .promotion_line{
+                            left: 45px;
+                            bottom: 26px;
+                        }
+                        
                         background: #FFD8EF;
                         color: rgba(28, 41, 77, 0.8);
 
                     }
                 }
             }
+            
+        }
+    }
+    .new{
+        background: #FFFF;
+        
+        .new_header{
+            display: flex;
+            justify-content: space-between;
+            padding: 22px 25px 2px;
+            
+            .slide_buttons{
+                display: flex;
+                
+            }
+        }
+        .new_main{
+            display: flex;
+            border-top:1px solid rgba(28, 41, 77, 0.15);
+            border-bottom:1px solid rgba(28, 41, 77, 0.15);
             .bookCard{
-    
-                padding: 20px;
-                background: #FFFF;
-                border-radius: 5px;
-                .bookCard_caption{
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 17px;
-                }
-                h4{
-                    margin: 0;
-                    font-size: 16px;
-                    font-weight: 500;
-                }
-                .timer{
-                    background:rgba(255, 122, 0, 0.15);
-                    padding: 5px 10px;
-                    border-radius: 5px;
-                    color: #FF7A00;
-                }
-                .bookCard_image{
-                    display: flex;
-                    justify-content: center;
-                    
-                }
-                .bookCard_section{
-                    color: $color50;
-                    font-size: 12px;
-                }
-                .bookCard_name{
-                    font-size: 14px;
-                }
-                .bookCard_author{
-                    font-size: 12px;
-                }
-                .bookCard_price{
-                    font-size: 18px;
-                    font-weight: 700;
-                }
-                .bookCard_buttons{
-                    button:nth-child(1){
-                        margin-right: 10px;
-                    }
-                }
+                width: 263px;
+            }
+        }
+        .new_footer{
+            padding: 11px;
+            a{
+                margin: 0 auto;
+                text-decoration: none;
+                color: $color100;
+                font-weight: 700;
             }
         }
     }
+}
+.--small {
+    width: 40px;
 }
