@@ -51,10 +51,11 @@ body{
     .button_icon{
         margin-right: 6px;
     }
+    .icon{
+        margin-right: 8px;
+    }
 }
-body a{
-    text-decoration: none;
-}
+
 
 .container{
     margin: 0 auto;
@@ -154,66 +155,89 @@ header{
     font-size: 14px;
     font-weight: $f-regular;
     background: #FFFF;
-    .header_section{
-        display: flex;
-    }
-    .header_referense_wrapper{
-        border-bottom: 1px solid #DFE0E1; 
-    }   
-    .header_reference_inner{
-        display: flex;
-        justify-content: space-between;
-        padding: 14px 0;
-        padding-left: 2px;
-        .header_section{
+    
+    .header_top{
+        border-bottom: 1px solid #DFE0E1;
+        &_inner{
             display: flex;
-            .reference_item{
-                margin-right: 31px;
+            padding: 15px 0;
+            padding-left: 2px;
+        } 
+    }
+    .nav{
+        &_list{
+            display: flex;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            &__item{
                 display: flex;
-                align-items: center;
-                &:last-child{
-                    margin-right: -1px;
-                    margin-left: -2px;
-                    padding: 0 3px;
-                }
-                   
+                margin-right: 31px;
+                color: red;
                 
-                .icon{
-                    display: inline-block;
-                    margin-right: 8px;
-                    &:last-child{
-                        margin: 0;
-                        margin-left: 6px;
-                        position: relative;
-                        top: 1px;
-                    }
-                }
-                a{
+                &__link{
+                    text-decoration: none;
                     color: $color80;
-                    font-weight: 400;
                 }
             }
         }
     }
+    .contacts{
+        margin-left: auto;
+        
+        &_list{
+            align-self: center;
+            display: flex;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            &__item{
+                display: flex;
+                margin-right: 31px;
+                color: red;
+                &:last-child{
+                    margin: 0;
+                }
+
+                
+                &__link{
+                    text-decoration: none;
+                    color: $color80;
+                    & + .icon{
+                        margin: 0;
+                        margin-left: 7px;
+                    }
+                }
+            }
+            
+        }
+
+    }   
+    
     .header_main{
         padding: 20px 0 0;
         display: flex;
         box-sizing: content-box;
         height: 40px;
-        justify-content: space-between;
-        .main_logo{
+        &__logo{
             margin-right: 30px;
         }
-        .main_search{
+        &_main__search{
             height: 100%;
             position: relative;
-            
-            .search{
+            &__input{
                 height: 100%;
                 width: 573px;
                 border: 1px solid #DFE0E1;
                 border-radius: 5px;
                 padding: 10px 0 10px 16px;
+            }
+        }
+        .main_search{
+            
+            
+            .search{
+                
             }
             .submit{
                 position: absolute;
