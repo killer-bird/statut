@@ -39,6 +39,8 @@ $base-bg:#FFFFFF;
 $color50: rgba(28, 41, 77, 0.5);
 $color80:rgba(28, 41, 77, 0.8);
 $color100:rgb(28, 41, 77);
+$colorOrange:#FF7A00;
+
 $f-regular:400;
 $f-medium:500;
 $f-bold:700;
@@ -66,18 +68,33 @@ h3{
     margin: 0;
     font-size: 20px;
 }
-.button{
+.btn{
     height: 40px;
     display: flex;
-    background: #ffff;
+    background: #fff;
     align-items: center;
     border-radius: 5px;
     border: 1px solid;
+    border-color: transparent;
+    color:#fff;
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
 }
-
+.burger{
+    margin-right: 7px;
+    &__item{
+        width: 13px;
+        height: 1px;
+        background: $color100;
+        margin-bottom: 4px;
+        &--sm{
+            width: 9px;
+            height: 1px;
+            margin-bottom: 4px;
+        }
+    }
+}
 .bookCard{
     
     padding: 22px 20px;
@@ -148,7 +165,10 @@ h3{
    
     
 }
-
+.--orange{
+    background: $colorOrange;
+}
+.--red{ color: #FF283D;}
 // HEADER
 header{
     width: 100%;
@@ -166,14 +186,22 @@ header{
     }
     .nav{
         &_list{
+            height: 100%;
             display: flex;
+            align-items: center;
             padding: 0;
             margin: 0;
+            align-items: center;
             list-style: none;
             &__item{
                 display: flex;
+                position: relative;
+                align-items: center;
                 margin-right: 31px;
                 color: red;
+                &:last-child{
+                    margin: 0;
+                }
                 
                 &__link{
                     text-decoration: none;
@@ -195,6 +223,7 @@ header{
                 display: flex;
                 margin-right: 31px;
                 color: red;
+                align-items: center;
                 &:last-child{
                     margin: 0;
                 }
@@ -215,14 +244,15 @@ header{
     }   
     
     .header_main{
-        padding: 20px 0 0;
+        padding: 20px 0 19px    ;
         display: flex;
+        
         box-sizing: content-box;
         height: 40px;
         &__logo{
             margin-right: 30px;
         }
-        &_main__search{
+        &__search{
             height: 100%;
             position: relative;
             &__input{
@@ -232,59 +262,34 @@ header{
                 border-radius: 5px;
                 padding: 10px 0 10px 16px;
             }
-        }
-        .main_search{
-            
-            
-            .search{
-                
-            }
-            .submit{
+            &__submit{
                 position: absolute;
                 right: 0;
                 bottom: 0;
-                align-items: center;
-                justify-content: center;
-                width: 123px;
-                height: 100%;
-                border:none;
                 border-radius: 0 5px 5px 0;
-                background: #FF7A00;
+                height: 100%;
+                padding: 0 25px;
+            }
+        }
+        
+        .nav{
+            margin-left: auto;
+            .nav_list__item__counter{
+                position: absolute;
+                width: 11px;
+                height: 11px;
+                box-sizing: content-box;
                 color: #FFFFFF;
-               
-
-            }
-        }
-        .main_panel{
-            display: flex;
-            height: 100%;
-            justify-content: space-between;
-            align-self: center;
-            .panel_button{
-                display: flex;
-                align-items: center;
-                position: relative;
-                margin-right: 31px;
-                cursor: pointer;
-                &:last-child{
-                    margin: 0;
-                }
+                font-size: 9px;
+                font-weight: 500;
+                padding: 2px;
+                border-radius: 50%;
+                left: 13px;
+                bottom: 14px;
                 
-                .counter{
-                    position: absolute;
-                    width: 11px;
-                    height: 11px;
-                    background: #FF7A00;
-                    color: #FFFFFF;
-                    font-size: 9px;
-                    box-sizing: content-box;
-                    border-radius: 50%;
-                    padding: 2px;
-                    left: 11px;
-                    top: 3px;
-                }
             }
         }
+      
     }
     .header_nav{
         padding: 20px 0;
@@ -295,17 +300,27 @@ header{
             margin: 0;
             .nav_item{
                 display: flex;
+                
                 margin-right: 25px;
                 .icon{
                     margin-right: 8px;
                 }
-                .--red{
-                    color: #FF283D
-                    ;
-                }
+                
+                   
+                    
+                
             }
         }
     }
+    .header_bottom{
+        padding: 0 020px;
+        .nav{
+            &_list__item{
+                margin-right: 25px;
+            }
+        }
+    }
+    .--red{ color: #FF283D;}
 }
 
 main{
