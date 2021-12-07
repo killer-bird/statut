@@ -161,6 +161,7 @@ h3{
         }
         .rating{
             margin-right: 10px;
+            padding: 0 7px;
         }
         .recommendations{
             background: rgba(121, 134, 203, 0.15);
@@ -540,6 +541,49 @@ main{
                 line-height: 20px;
             }
         }
+    }
+    .subscribe{
+        display: flex;
+        margin: 27px 0;
+        background: #0288D1;
+        position: relative;
+        border-radius: 5px;
+        align-items: center;
+        padding: 32px 45px;
+        
+        &__text{
+            position: relative;
+            z-index: 2;
+            margin-right: 13px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+        }
+        &__form{
+            display: flex;
+            &__email{
+                border: none;
+                border-radius: 5px;
+                width: 418px;
+                padding: 10px 15px;
+                margin-right: 8px;
+                
+            }
+            &__submit{
+                margin-left: auto;
+                padding: 0 25px;
+                border-color: #fff;
+                background: transparent;
+            }
+        }
+        &__line{
+            z-index: 1;
+            position: absolute;
+            left: 101px;
+            top: calc(50% - 14px);
+            
+        }
+        
     }
 }
 .--small {
