@@ -1,0 +1,76 @@
+.bar{
+    background: #FFFF;
+    
+    &_header{
+        display: flex;
+        padding: 21px 25px 13px;
+        
+        &__buttons{
+            margin-left: auto;
+            display: flex;
+            &__prev{
+                width: 30px;
+                height: 30px;
+                position: relative;
+                border-radius: 5px 0 0 5px;
+                border: 1px solid $color15;
+                &::after{
+                   @include arrow(2px,left )
+                }
+            }
+            &__next{
+                width: 30px;
+                height: 30px;
+                position: relative;
+                border-radius: 0 5px 5px 0;
+                border: 1px solid $color15;
+                &::after{
+                    @include arrow(2px,right )
+                }
+            }
+            
+        }
+       
+    }
+    &_main{
+        display: flex;
+        
+        border-top:1px solid rgba(28, 41, 77, 0.15);
+        border-bottom:1px solid rgba(28, 41, 77, 0.15);
+        &__item{
+            width: fit-content;
+            padding: 20px 37px;
+            border-right: 1px solid rgba(28, 41, 77, 0.15);
+            &:first-child{
+                padding: 20px 34px 20px 20px;
+            }
+            &:nth-child(2){
+                padding: 20px 36px 20px 50px;
+            }
+            &:last-child{
+                border: none;
+                padding: 20px 20px 20px 34px;
+            }
+            .bookCard{
+                &__rate{
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        
+        
+    }
+    &_footer{
+        padding: 11px 0;
+        text-align: center;
+        font-family: Roboto;
+
+        a{
+            text-decoration: none;
+            color: $color100;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+}

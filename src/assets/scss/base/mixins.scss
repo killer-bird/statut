@@ -1,0 +1,30 @@
+/* Mixins:
+   ========================================================================== */
+
+   @mixin roboto {
+      font-family: 'Roboto', 'sans-serif';
+  }
+  @mixin gosha {
+      font-family: 'Gosha Sans';
+  }
+  @mixin arrow($size, $direction) {
+      content: "";
+      position: absolute;
+      border: solid rgba(42, 61, 72, 0.5);
+      border-width: 0 2px 2px 0;
+      display: block;
+      padding: $size;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      @if $direction == left{
+          transform: translate(-50%, -50%) rotate(135deg);
+          -webkit-transform: translate(-50%, -50%) rotate(135deg);
+      }@else{
+          transform:translate(-50%, -50%) rotate(-45deg);
+          -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+      }
+      
+  }   
+  

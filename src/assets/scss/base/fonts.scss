@@ -1,0 +1,41 @@
+/*
+Пример подключения
+-------------------
+@font-face
+{
+	font-family: 'Roboto-mono';
+	src: url('./fonts/Roboto_mono/Light/RobotoMono-Light.eot');
+	src: url('./fonts/Roboto_mono/Light/RobotoMono-Light.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/Roboto_mono/Light/RobotoMono-Light.woff2') format('woff2'),
+		url('./fonts/Roboto_mono/Light/RobotoMono-Light.woff') format('woff'),
+		url('./fonts/Roboto_mono/Light/RobotoMono-Light.svg#RobotoMono-Light') format('svg'),
+		url('./fonts/Roboto_mono/Light/RobotoMono-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+*/
+
+@font-face {
+    font-family: Roboto;
+    src: url(fonts/Roboto-Regular.woff);
+    font-weight: 400;
+    font-display: swap;      
+}
+@font-face {
+    font-family: Roboto;
+    src: url(fonts/Roboto-Medium.woff);
+    font-weight: 500; 
+    font-display: swap;     
+}
+@font-face {
+    font-family: Roboto;
+    src: url(fonts/Roboto-Bold.woff);
+    font-weight: 700; 
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Gosha Sans;
+    src: url(fonts/GoshaSans-Regular.woff);
+}

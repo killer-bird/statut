@@ -1,0 +1,20 @@
+{% extends "layouts/layout.twig" %}
+
+{% block page %}
+	<main>
+		<div class="container">
+			{% include "blocks/promo/promo.twig" %}
+			{% include "blocks/bar/bar.twig" %}
+			{% include "blocks/subscribe/subscribe.twig" %}
+			{% include "blocks/bar/bar.twig" %}
+			{% include "blocks/features/features.twig" %}
+			
+		</div>
+	</main>
+	{#
+		Пример подключения файла
+		{% include 'blocks/component/component.twig' %}
+		Пример подключения svg
+		{% include '/assets/component/component.svg' %}
+	#}
+{% endblock %}

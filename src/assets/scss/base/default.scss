@@ -1,0 +1,182 @@
+.container
+{
+	max-width: 1140px;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	// padding:0 20px;
+}
+
+
+h3
+{
+    margin: 0;
+    font-size: 20px;
+}
+
+.btn
+{
+    height: 40px;
+    display: flex;
+    background: #fff;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: transparent;
+    color:#fff;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.burger
+{
+    margin-right: 7px;
+    &__item
+	{
+        width: 13px;
+        height: 1px;
+        background: $color100;
+        margin-bottom: 4px;
+        &--sm
+		{
+            width: 9px;
+            height: 1px;
+            margin-bottom: 4px;
+        }
+    }
+}
+.bookCard
+{
+    &__image
+	{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+        
+    }
+    &_info
+	{
+        &__section
+		{
+            font-size: 12px;
+            line-height: 15px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+        &__name
+		{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 19px;
+            margin-bottom: 10px;
+        }
+        &__author
+		{
+            font-size: 12px;
+            line-height: 15px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+        &__price
+		{
+            font-size: 18px;
+            line-height: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+    }
+    &__rate
+	{
+        display: flex;
+        height: 25px;
+        &__item
+		{
+            height: 100%;
+            display: flex;
+            border-radius: 5px;
+            align-items: center;
+            padding: 0 10px;
+            font-size: 12px;
+        }
+        .rating
+		{
+            margin-right: 10px;
+            padding: 0 7px;
+        }
+        .recommendations
+		{
+            background: rgba(121, 134, 203, 0.15);
+            color: #7986CB;
+        }
+        .--gold
+		{
+            background: rgba(251, 192, 45, 0.15);
+            color: #fbc02d;
+        }
+    }
+   
+    &__buttons
+	{
+        display: flex;
+        button:nth-child(1)
+		{
+            margin-right: 10px;
+        }
+        &__itemz
+		{
+            justify-content: center;
+            color: $color100;
+            width: 146px;
+            font-family: 'Roboto';
+            border-color: #EEEE;
+            
+        }
+    }
+   
+    
+   
+    
+}
+.newsCard
+{
+    &__img 
+	{
+        & img
+		{
+            border-radius: 5px;
+        }
+        
+    }
+    &__info
+	{
+        &__date
+		{
+            color:$color50;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        &__caption
+		{
+            font-size: 16px;
+            font-weight: 500;
+        }
+        &__text
+		{
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+    &__button
+	{
+        border: 1px solid rgba(238, 238, 238, 1);
+        color: $color100;
+        
+        padding: 0 66px;
+
+    }
+}
+.--orange{background: $colorOrange;}
+.--red{ color: #FF283D;}
+
