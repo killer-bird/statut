@@ -2,9 +2,9 @@
 @import 'base/mixins.scss';
 
 /* base */
+@import 'base/normalize';
 @import 'base/fonts';
 @import 'base/variables';
-@import 'base/normalize';
 @import 'base/typography';
 @import 'base/default';
 
@@ -49,6 +49,7 @@ body{
     }
     .icon{
         margin-right: 8px;
+		margin-top: 1px;
     }
 }
 

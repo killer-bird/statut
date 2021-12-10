@@ -8,22 +8,42 @@
         &__buttons{
             margin-left: auto;
             display: flex;
+            
             &__prev{
                 width: 30px;
                 height: 30px;
                 position: relative;
+                
                 border-radius: 5px 0 0 5px;
                 border: 1px solid $color15;
+                cursor: pointer;
+                
                 &::after{
                    @include arrow(2px,left )
+                   
+                }
+                &:hover{
+                    &::after{
+                        border-color: $color100
+                    }
+                    
                 }
             }
             &__next{
                 width: 30px;
                 height: 30px;
                 position: relative;
+                cursor: pointer;
                 border-radius: 0 5px 5px 0;
                 border: 1px solid $color15;
+                
+                &:hover{
+                    &::after{
+                        border-color: $color100
+                    }
+                    
+                }
+
                 &::after{
                     @include arrow(2px,right )
                 }
