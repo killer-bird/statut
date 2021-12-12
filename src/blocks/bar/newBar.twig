@@ -1,0 +1,93 @@
+{% extends "../../layouts/bar.twig" %}
+
+{% block header %}Новые поступления{% endblock header%}
+
+{% block content %}
+    {% embed "../../layouts/bookCard.twig" %}
+        {% block card_img %}
+            <img width="140" height="200" src="img/image 142.jpg" alt="">
+        {% endblock %}
+        {% block label_best %}{% endblock %}
+        {% block label_promo %}{% endblock %}
+        {% block card_section %}
+            Корпоративное право
+        {% endblock %}
+        {% block card_name %}
+             Инвестирование: способы,<br>риски, субъекты : монография
+        {% endblock %}
+        {% block card_author %}
+            Майфат А.В.
+        {% endblock %}
+        {% block rate %}{% endblock %}
+        {% block card_price %}
+            4 450 ₽
+        {% endblock %}
+    {% endembed %}
+
+
+    {% embed "../../layouts/bookCard.twig" %}
+        {% block card_img %}
+           <img width="140" height="200" src="img/image 140.jpg" alt="">
+        {% endblock %}
+        {% block label_new %}{% endblock %}
+        {% block card_section %}
+            Договорное право
+        {% endblock %}
+        {% block card_name %}
+              Договор коммерческой <br> концессии (франчайзинг). Граж...
+        {% endblock %}
+        {% block card_author %}
+            Багдасарян А.Ф..
+        {% endblock %}
+        
+        {% block rate %}{% endblock %}
+        {% block card_price %}
+            372 ₽
+        {% endblock %}
+    {% endembed %}
+    {% embed "../../layouts/bookCard.twig" %}
+        {% block card_img %}
+           <img width="140" height="200" src="img/image 145.jpg" alt="">
+        {% endblock %}
+        {% block card_section %}
+            Корпоративное право
+        {% endblock %}
+        {% block card_name %}
+              Договор коммерческой <br> концессии (франчайзинг). Граж...
+        {% endblock %}
+        {% block card_author %}
+            Башлаков-Николаев И.В.
+        {% endblock %}
+        {% block rate %}{% endblock %}
+        {% block card_price %}
+            <span class="--red">984 ₽</span>
+            <span class="bookCard_info__price__old">1 284 ₽</span>
+            <span class="bookCard_info__price__benefit  ">Выгода 300 ₽</span>
+        {% endblock %}
+    {% endembed %}
+    {% embed "../../layouts/bookCard.twig" %}
+        {% block card_img %}
+           <img width="140" height="200" src="img/image 142.jpg" alt="">
+        {% endblock %}
+        {% block label_best %}{% endblock %}
+        {% block label_promo %}{% endblock %}
+        {% block card_section %}
+            Корпоративное право
+        {% endblock %}
+        {% block card_name %}
+              Инвестирование: способы,<br> риски, субъекты : монография
+        {% endblock %}
+        {% block card_author %}
+            Майфат А.В.
+        {% endblock %}
+        {% block rate %}{% endblock %}
+        {% block card_price %}
+            450 ₽
+        {% endblock %}
+    {% endembed %}
+{% endblock %}
+
+{% block footer %}
+    Показать все книги раздела
+{% endblock %}
+

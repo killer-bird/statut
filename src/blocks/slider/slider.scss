@@ -2,9 +2,22 @@
 {
     position: relative;
     margin-bottom: 24px;
-    &__item img
-    {
-        border-radius: 5px;
+    display: flex;
+    overflow: hidden;
+    width: 750px;
+    height: 357px; 
+    
+    
+    &__item 
+    {   border-radius: 5px;
+        position: relative;
+        min-width: 200x;
+        height: 357px;
+        transition: 2s;
+        & img{border-radius: 5px;}
+        &:nth-child(2){background: chartreuse;}
+        &:nth-child(3){background: rebeccapurple;}
+        &:nth-child(4){background: red;}
     }
     &__pointer
     {
@@ -55,6 +68,7 @@
         &__item
         {
             width: 25px;
+            cursor: pointer;
             height: 2px;
             margin-right: 5px;
             background: rgba(255, 255, 255, 0.5);

@@ -2,7 +2,7 @@
 {
     display: flex;
     flex-wrap: wrap;
-    padding: 24px 0;
+    
     
     &_bookOfDay
     {
@@ -11,10 +11,11 @@
         padding: 20px;
         background: #fff;
         border-radius: 5px;
+            
         &__top
         {
             display: flex;
-            margin-bottom: 14px;
+            margin-bottom: 18px;
             h4
             {
                 margin: 0;

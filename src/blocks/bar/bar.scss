@@ -1,9 +1,9 @@
 .bar{
     background: #FFFF;
-    
+    border-radius: 5px;
     &_header{
         display: flex;
-        padding: 21px 25px 13px;
+        padding: 17px 25px 10px;
         
         &__buttons{
             margin-left: auto;
@@ -58,18 +58,21 @@
         border-top:1px solid rgba(28, 41, 77, 0.15);
         border-bottom:1px solid rgba(28, 41, 77, 0.15);
         &__item{
-            width: fit-content;
-            padding: 20px 37px;
+            
+            padding-top: 24px;
+            padding-right: 34px;
+            padding-left: 34px;
+            padding-bottom: 18px;
             border-right: 1px solid rgba(28, 41, 77, 0.15);
             &:first-child{
-                padding: 20px 34px 20px 20px;
+                padding-left: 20px;
             }
-            &:nth-child(2){
-                padding: 20px 36px 20px 50px;
-            }
+            
             &:last-child{
                 border: none;
-                padding: 20px 20px 20px 34px;
+                padding-top: 24px;
+                padding-right: 20px;
+                padding-left: 34px;
             }
             .bookCard{
                 &__rate{
@@ -81,7 +84,7 @@
         
     }
     &_footer{
-        padding: 11px 0;
+        padding: 7px 0;
         text-align: center;
         font-family: Roboto;
 

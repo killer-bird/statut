@@ -21,12 +21,11 @@ html
         &__form{
             display: flex;
             &__email{
-                border: none;
-                border-radius: 5px;
-                width: 418px;
-                padding: 10px 15px;
-                margin-right: 8px;
                 
+                margin-right: 8px;
+                width: 418px;
+               
+               
             }
             &__submit{
                 margin-left: auto;

@@ -15,6 +15,7 @@
 @import 'blocks/bar/bar';
 @import 'blocks/subscribe/subscribe';
 @import 'blocks/features/features';
+@import 'blocks/footer/footer';
 
 
 /* Пример подключения*/
@@ -47,8 +48,10 @@ body{
     .button_icon{
         margin-right: 6px;
     }
-    .icon{
-        margin-right: 8px;
+    .icon
+	{
+		
+		margin-right: 8px;
 		margin-top: 1px;
     }
 }
@@ -65,6 +68,7 @@ p{
 .--small {
     width: 40px;
     .icon{
+		display: flex;
         margin: 0 auto;
     }
 }
