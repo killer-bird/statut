@@ -45,3 +45,23 @@ html
     }
 }
 
+@media(max-width:1200px){
+    html{
+        .subscribe{
+            &__line{
+                top: 32px;
+            }
+        }
+    }
+}
+@media (max-width:1024px) {
+    html{
+        .subscribe{
+            padding: 25px;
+            &__line{
+                top: 25px;
+                left: 84px;
+            }
+        }
+    }
+}

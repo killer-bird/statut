@@ -146,3 +146,13 @@ header{
     }
     .--red{ color: #FF283D;}
 }
+@media(max-width:1024px) {
+    .header_top{display: none;}
+    .header_main{
+        &__search__input{width: 400px;}
+        .nav{
+            margin-left: 0 auto;
+            &_list__item:nth-child(1),&_list__item:nth-child(2){display: none;}
+        }
+    }
+}

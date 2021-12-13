@@ -117,3 +117,29 @@
         }
     }
 }
+@media(max-width:1200px){
+    .footer{
+        
+        &_top{
+            &__inner{justify-content: space-between;}
+            &__logo{margin: 0;}
+            &__form{margin: 0;}
+        }
+    }
+}
+@media(max-width:1024px){
+    .footer{
+        flex-wrap: wrap;
+        &_bottom{display: none;}
+        &_main{
+            flex-wrap: wrap;
+            justify-content: space-between;
+           
+        }
+       
+    .col{
+        
+        margin: 0px;
+    }
+}
+}

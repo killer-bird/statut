@@ -87,3 +87,28 @@
     }
     
 }
+
+@media(max-width:1200px){
+    .promo{
+
+        &_bookOfDay{
+            width: 250px;
+            margin-left: auto;
+            padding: 10px;
+            background: #fff;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+        
+        }
+    }
+}
+@media(max-width:1024px){
+    .promo{
+        .left{margin-bottom: 30px;}
+        &_bookOfDay{
+            
+            width: 750px;
+            margin: 0;
+        }
+    }
+}

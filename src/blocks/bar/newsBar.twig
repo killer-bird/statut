@@ -1,5 +1,6 @@
 {% extends "../../layouts/bar.twig" %}
 
+{% block id %}news{% endblock %}
 {% block header %}Новости{% endblock header%}
 
 {% block content %}
@@ -72,6 +73,9 @@
             <button class="newsCard__button btn">Читать</button>
         </div>
     </div>
-</div>
 
+
+{% endblock %}
+{% block footer %}
+    Показать все новости
 {% endblock %}

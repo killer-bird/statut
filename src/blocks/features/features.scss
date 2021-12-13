@@ -33,3 +33,24 @@
       }
     }
 }
+@media(max-width:1200px){
+    .features{
+        &_item__content{
+            margin-left: 80px;
+        }
+    }
+}
+@media(max-width:1024px){
+    .features{
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: -10px;
+        &_item{
+            width: 40%;
+            margin: 0;
+            &:last-child{margin: 10px;}
+        }
+        &>*{margin: 10px;}
+        
+    }
+}
