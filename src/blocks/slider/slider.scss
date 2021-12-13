@@ -11,9 +11,10 @@
     &__item 
     {   border-radius: 5px;
         position: relative;
-        min-width: 200x;
-        height: 357px;
-        transition: 2s;
+        min-width: 750px;
+        height: 350px;
+        left: 0;
+        transition: 0.3s;
         & img{border-radius: 5px;}
         &:nth-child(2){background: chartreuse;}
         &:nth-child(3){background: rebeccapurple;}
