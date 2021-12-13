@@ -1,0 +1,80 @@
+.slider
+{
+    position: relative;
+    margin-bottom: 24px;
+    display: flex;
+    overflow: hidden;
+    width: 750px;
+    height: 357px; 
+    
+    
+    &__item 
+    {   border-radius: 5px;
+        position: relative;
+        min-width: 200x;
+        height: 357px;
+        transition: 2s;
+        & img{border-radius: 5px;}
+        &:nth-child(2){background: chartreuse;}
+        &:nth-child(3){background: rebeccapurple;}
+        &:nth-child(4){background: red;}
+    }
+    &__pointer
+    {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background:#fff;
+        opacity: 50%;
+        top: 155px;
+        border-radius: 5px;
+        left: 27px; 
+        cursor: pointer;
+        &:hover
+        {
+            opacity: 100%;
+        }           
+    }
+    .prev
+    {
+        &::after
+        {
+            @include arrow(3px, left)
+        }
+        &:hover &::after{
+            border-color:rgba(42, 61, 72, 1) ;
+        }
+    }
+    .next
+    {
+        right: 28px;
+        left: auto;
+        &::after
+        {
+           @include arrow(3px, right)
+        }
+        &:hover &::after
+        {
+            border-color:rgba(42, 61, 72, 1) ;
+        }
+    }
+    &__dots
+    {
+        position: absolute;
+        bottom: 25px;
+        display: flex;
+        left: 50%;
+        transform: translate(-50%);
+        &__item
+        {
+            width: 25px;
+            cursor: pointer;
+            height: 2px;
+            margin-right: 5px;
+            background: rgba(255, 255, 255, 0.5);
+            &:last-child{margin: 0;}
+            
+        }
+        .--active{background: #ffff;}
+    }
+}

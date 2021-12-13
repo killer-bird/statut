@@ -1,0 +1,21 @@
+<section>
+    <div class="bar">
+        <div class="bar_header">
+            <h2>{% block header %}{% endblock %}</h2>
+            <div class="bar_header__buttons">
+                <div class="bar_header__buttons__prev"></div>
+                <div class="bar_header__buttons__next"> </div>
+            </div>
+        </div>
+        <div class="bar_main">
+           {% block content %}{% endblock %}
+        </div>
+     
+        
+        {% if block("footer") is defined %}
+            <div class="bar_footer">
+                <a href="#">{% block footer %}{% endblock %}</a>
+            </div>
+        {% endif %}
+    </div>
+</section>

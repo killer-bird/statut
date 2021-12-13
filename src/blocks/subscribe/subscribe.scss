@@ -1,0 +1,47 @@
+html
+{
+    .subscribe
+    {
+        display: flex;
+        margin: 30px 0;
+        background: #0288D1;
+        position: relative;
+        border-radius: 5px;
+        align-items: center;
+        padding: 32px 45px;
+        
+        &__text{
+            position: relative;
+            z-index: 2;
+            margin-right: 13px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+        }
+        &__form{
+            display: flex;
+            &__email{
+                
+                margin-right: 8px;
+                width: 418px;
+               
+               
+            }
+            &__submit{
+                margin-left: auto;
+                padding: 0 25px;
+                border-color: #fff;
+                background: transparent;
+            }
+        }
+        &__line{
+            z-index: 1;
+            position: absolute;
+            left: 101px;
+            top: calc(50% - 14px);
+            
+        }
+        
+    }
+}
+

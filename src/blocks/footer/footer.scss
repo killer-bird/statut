@@ -1,0 +1,119 @@
+.footer
+{   
+    background: #fff;
+    &_top
+    {   
+        
+        &__wrapper{
+            background: rgba(40, 47, 54, 0.04);
+            display: flex;
+            padding: 22px 0;
+
+        }
+        &__inner{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            
+            
+        }
+        &__logo{
+            margin-right: 298px;
+        }
+
+        &__form{
+            display: flex;
+            position: relative;
+            margin-right: 199px;
+            margin-bottom: 5px;
+            &__email{
+                width: 443px;
+            }
+            &__submit{
+                & svg{
+                    margin: 0 auto;
+                }
+                border-radius: 0 5px 5px 0;
+                position: absolute;
+                width: 50px;
+                height: 40px;
+                right: 0;
+            }
+        }
+        &__socials{
+            display: flex;
+            
+            &__item{
+                margin-left: 15px;
+                &:first-child{ margin: 0;}
+            }
+        }
+        
+    }
+    &_main{
+        display: flex;
+        padding: 45px 0 27px;
+        border-bottom: 1px solid $color15;
+        .col{
+            margin-right: 30px; 
+            &__header
+            {
+                min-width: 165px;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+                margin-bottom: 25px;
+            }
+
+            &__item
+            {
+                display: flex;
+                color: $color80;
+                font-size: 14px;
+                line-height: 20px;
+                margin-bottom: 15px;
+                &__size{
+                    font-size: 12px;
+                    color: $color50;
+
+                }
+            }
+        }
+    }
+    &_bottom{
+        display: flex;
+        padding: 40px 0 45px;
+        justify-content: space-between;
+        &__publisher{
+            // margin-right: 208px;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+            color: $color50;
+        }
+        &__section{
+            display: flex;
+            
+        }
+        &__address{
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+            color: $color80;
+                margin-right: 67px;
+        }
+        &__private_politics{
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+            color: $color80;
+            margin-right: 30px;
+        }
+        &__offer{
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+            color: $color80;
+        }
+    }
+}

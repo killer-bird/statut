@@ -1,0 +1,99 @@
+.bar{
+    background: #FFFF;
+    border-radius: 5px;
+    &_header{
+        display: flex;
+        padding: 17px 25px 10px;
+        
+        &__buttons{
+            margin-left: auto;
+            display: flex;
+            
+            &__prev{
+                width: 30px;
+                height: 30px;
+                position: relative;
+                
+                border-radius: 5px 0 0 5px;
+                border: 1px solid $color15;
+                cursor: pointer;
+                
+                &::after{
+                   @include arrow(2px,left )
+                   
+                }
+                &:hover{
+                    &::after{
+                        border-color: $color100
+                    }
+                    
+                }
+            }
+            &__next{
+                width: 30px;
+                height: 30px;
+                position: relative;
+                cursor: pointer;
+                border-radius: 0 5px 5px 0;
+                border: 1px solid $color15;
+                
+                &:hover{
+                    &::after{
+                        border-color: $color100
+                    }
+                    
+                }
+
+                &::after{
+                    @include arrow(2px,right )
+                }
+            }
+            
+        }
+       
+    }
+    &_main{
+        display: flex;
+        
+        border-top:1px solid rgba(28, 41, 77, 0.15);
+        border-bottom:1px solid rgba(28, 41, 77, 0.15);
+        &__item{
+            
+            padding-top: 24px;
+            padding-right: 34px;
+            padding-left: 34px;
+            padding-bottom: 18px;
+            border-right: 1px solid rgba(28, 41, 77, 0.15);
+            &:first-child{
+                padding-left: 20px;
+            }
+            
+            &:last-child{
+                border: none;
+                padding-top: 24px;
+                padding-right: 20px;
+                padding-left: 34px;
+            }
+            .bookCard{
+                &__rate{
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        
+        
+    }
+    &_footer{
+        padding: 7px 0;
+        text-align: center;
+        font-family: Roboto;
+
+        a{
+            text-decoration: none;
+            color: $color100;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+}

@@ -1,0 +1,74 @@
+/* mixins */
+@import 'base/mixins.scss';
+
+/* base */
+@import 'base/normalize';
+@import 'base/fonts';
+@import 'base/variables';
+@import 'base/typography';
+@import 'base/default';
+
+/* blocks */
+@import 'blocks/header/header';
+@import 'blocks/slider/slider';
+@import 'blocks/promo/promo';
+@import 'blocks/bar/bar';
+@import 'blocks/subscribe/subscribe';
+@import 'blocks/features/features';
+@import 'blocks/footer/footer';
+
+
+/* Пример подключения*/
+/* @import 'blocks/component/component'; */
+/* pages */
+
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	outline: 0;
+	&:before,
+	&:after {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+}
+html
+{
+	line-height: $mainLineHeight;
+	font-size: $mainFontSize;
+	color: $mainFontColor;
+	-webkit-font-smoothing: antialiased;
+}
+body{
+    background: #E5E5E5;
+    @include roboto();
+    .button_icon{
+        margin-right: 6px;
+    }
+    .icon
+	{
+		
+		margin-right: 8px;
+		margin-top: 1px;
+    }
+}
+
+p{
+    margin: 0;
+}
+
+
+
+
+
+
+.--small {
+    width: 40px;
+    .icon{
+		display: flex;
+        margin: 0 auto;
+    }
+}
