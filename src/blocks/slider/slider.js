@@ -6,51 +6,51 @@ const items = document.querySelectorAll('.slider_track__item');
 const item = document.querySelector('.slider_track__item');
 const dots = document.querySelectorAll('.slider__dots__item')
 
-let pos = 0;
-let current = 0;
+
 let old = 0;
+
+
 let sliderIndex = 0;
 
 
 const sliderLen = slider.offsetWidth * items.length - slider.offsetWidth;
-console.log(sliderLen, items)
+
 const slide = (pos)=>{
     track.style.left = pos + 'px'
 }
 
 
 next.addEventListener('click', ()=>{
-    pos-=slider.offsetWidth;
-    dots[current].classList.remove("--active");
-    console.log(pos, sliderLen)
-    if(pos < -sliderLen){
-        pos = 0;
-        dots[current].classList.remove("--active");
-        current = 0;
-        dots[current].classList.add("--active");
+    dots[sliderIndex].classList.remove("--active");
+    sliderIndex++
+    console.log(sliderIndex)
+    if(sliderIndex > items.length -1){
+        sliderIndex = 0
+        dots[sliderIndex].classList.add("--active");
     }else{
-        current++;
-        dots[current].classList.add("--active");
+        
+        dots[sliderIndex].classList.add("--active");
     }
-    slide(pos)
+    slide(sliderIndex * -slider.offsetWidth)
 })
 
 
 prev.addEventListener('click', ()=>{
-    pos+=slider.offsetWidth;
-    dots[current].classList.remove("--active");
-    
-    if( pos > 0 ){
-        pos = -sliderLen;
-        dots[current].classList.remove("--active");
-        current = 3;
-        dots[current].classList.add("--active");
+    dots[sliderIndex].classList.remove("--active");
+    sliderIndex--
+    console.log(sliderIndex)
+    if( sliderIndex < 0 ){
+        
+        sliderIndex = 3;
+        dots[sliderIndex].classList.add("--active");
     }else{
-        current--;
-        dots[current].classList.add("--active");
+        
+        
+        dots[sliderIndex].classList.add("--active");
     }
-    slide(pos)
-    })
+    console.log(sliderIndex * slider.offsetWidth)
+    slide(sliderIndex * -slider.offsetWidth)
+})
 
 
 dots.forEach((dot, index)=>{
@@ -59,48 +59,68 @@ dots.forEach((dot, index)=>{
             return
         }
         items.forEach(item=>{
-            pos = index * -slider.offsetWidth;
-            dots[current].classList.remove("--active");
-            current = index;
-            dots[current].classList.add("--active");
-            slide(pos)
+            dots[sliderIndex].classList.remove("--active");
+            sliderIndex = index;
+            dots[sliderIndex].classList.add("--active");
+            slide(index * -slider.offsetWidth)
         })
         
     })
 })
 
-const move = (e)=> {
+track.ondragstart = () => false;
+
+const moveEvent = (e)=> {
+
+    // console.log("eventMove", e.clientX, old)
+    // if(e.clientX > old){
+    //     
+    //     old = e.clientX
+    // }
+    // if(e.clientX < old){
+    //     sliderIndex--
+    //     old = e.clientX
+    // }
+    
     let offset = e.clientX - slider.getBoundingClientRect().left
     const point = 50
-    let curr = e.clientX - old
+    let curr = e.clientX - old   
     console.log(curr, point)
+
     if(curr >= point){
-        console.log("right", curr)
-       
-        
-        
+        console.log("right", curr) 
+        sliderIndex++ 
     }
     if(curr<= -point){
         console.log("left", offset)
-        pos -= slider.offsetWidth
-        slide(pos)
-        curr = 0;
-          
+        sliderIndex--       
     }
+    slide(sliderIndex * -slider.offsetWidth)
+
+    endEvent()
+}
+const startEvent = (e)=>{
+    console.log("eventStarted")
+    
+    // track.addEventListener('touchmove', moveEvent)
+    track.addEventListener('pointerdown', moveEvent)
+}
+const endEvent = ()=>{
+    console.log("event ended")
+    document.removeEventListener('touchmove', moveEvent);
+    document.removeEventListener('mousemove', moveEvent);
+    document.removeEventListener('touchend', endEvent);
+    document.removeEventListener('pointerup', endEvent);
 }
 
-track.addEventListener('pointerdown', (e)=>{
-    e.preventDefault
-    track.ondragstart = ()=>false;
-    old = e.clientX
-    
-    
-    track.addEventListener("pointermove", move)
-})
-slider.addEventListener('dragstart', ()=>{
-    return false
-})
-track.addEventListener('pointerup',()=>{
-    document.removeEventListener("pointermove", move)
-    console.log("remove")
-})
+track.addEventListener('touchstart', startEvent);
+track.addEventListener('pointerdown', startEvent);
+
+track.addEventListener('touchend', endEvent);
+track.addEventListener('pointerup', endEvent);
+
+
+
+
+
+track.addEventListener
