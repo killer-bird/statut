@@ -8,17 +8,22 @@
     height: 357px; 
     
     
-    &__item 
-    {   border-radius: 5px;
-        position: relative;
-        min-width: 750px;
-        height: 350px;
+    &_track{
+        position: absolute;
+        display: flex;
         left: 0;
-        transition: 0.3s;
-        & img{border-radius: 5px;}
-        &:nth-child(2){background: chartreuse;}
-        &:nth-child(3){background: rebeccapurple;}
-        &:nth-child(4){background: red;}
+        transition: 0.3s; 
+        &__item 
+        {   
+            border-radius: 5px;
+            
+            min-width: 750px;
+            height: 350px;
+            & img{border-radius: 5px;}
+            &:nth-child(2){background: chartreuse;}
+            &:nth-child(3){background: rebeccapurple;}
+            &:nth-child(4){background: red;}
+        }
     }
     &__pointer
     {
@@ -78,4 +83,17 @@
         }
         .--active{background: #ffff;}
     }
+}
+@media(max-width:768px){
+    .slider{
+        width: 355px;
+        height: 175px;
+        &_track{
+            &__item img{
+                width: 355px;
+                height: 175px; 
+            }
+        }
+    }
+   
 }
