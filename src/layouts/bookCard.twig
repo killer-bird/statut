@@ -30,7 +30,8 @@
                     {% block card_section %}{% endblock %}
                 </p>
                 <div class="bookCard_info__name">
-                    <span>{% block card_name %}{% endblock %}</span>
+                    <span class="bookCard_info__name__full">{% block card_name %}{% endblock %}</span>
+                    <div class="bookCard_info__name__short">{% block short_name %}{% endblock %}</div>
                 </div>
                 <p class="bookCard_info__author">
                     {% block card_author %}{% endblock %}

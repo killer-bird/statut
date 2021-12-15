@@ -17,7 +17,7 @@
         {   
             border-radius: 5px;
             
-            min-width: 750px;
+            max-width: 750px;
             height: 350px;
             & img{border-radius: 5px;}
             &:nth-child(2){background: chartreuse;}
@@ -86,12 +86,19 @@
 }
 @media(max-width:768px){
     .slider{
-        width: 355px;
-        height: 175px;
+        max-width: 413px;
+        height: 205px;
         &_track{
-            &__item, &__item img{
-                width: 355px;
-                height: 175px; 
+            &__item{
+                min-width: 413px;
+                height: 205px;
+               
+               
+                & img{
+                    max-width: 413px;
+                    flex-shrink: 1;
+                    height: 205px;
+                } 
             }
         }
         &__pointer{display: none;}

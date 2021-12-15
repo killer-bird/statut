@@ -1,6 +1,8 @@
 .footer
 {   
     background: #fff;
+    &_top__inner__mobile{display: none;}
+    &_main__mobile{display: none;}
     &_top
     {   
         
@@ -137,9 +139,22 @@
            
         }
        
-    .col{
-        
-        margin: 0px;
+        .col{
+            
+            margin: 0px;
+        }
     }
 }
+@media(max-width:768px){
+    .footer{
+
+        &_top__inner, &_main{display: none;}
+        &_top__inner__mobile{
+            display: block;
+        }
+        &_main__mobile{
+            display: block;
+        }
+    }
+
 }

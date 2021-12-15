@@ -69,8 +69,19 @@ html
     html{
         .subscribe{
             flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            &__text{margin-right: 0;}
             &__form{
                 flex-direction: column;
+                gap: 10px;
+                &__email{
+                    margin-right: 0;
+                }
+                &__submit{
+                    width: 100%;
+                    justify-content: center;
+                }
             }
         }
     }
