@@ -112,3 +112,11 @@
         }
     }
 }
+@media(max-width:768px){
+    .promo{
+        &_promotions{
+            flex-direction: column;
+        }
+    }
+
+}

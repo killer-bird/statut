@@ -65,3 +65,13 @@ html
         }
     }
 }
+@media(max-width:768px){
+    html{
+        .subscribe{
+            flex-direction: column;
+            &__form{
+                flex-direction: column;
+            }
+        }
+    }
+}

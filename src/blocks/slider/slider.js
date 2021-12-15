@@ -8,48 +8,38 @@ const dots = document.querySelectorAll('.slider__dots__item')
 
 
 let old = 0;
-
-
+let dragging = false;
 let sliderIndex = 0;
 
 
 const sliderLen = slider.offsetWidth * items.length - slider.offsetWidth;
 
-const slide = (pos)=>{
-    track.style.left = pos + 'px'
+const slide = ()=>{
+    if(sliderIndex > items.length -1){
+        sliderIndex = 0
+    }
+    if(sliderIndex < 0){
+        
+        sliderIndex = 3
+    }
+   
+    dots[sliderIndex].classList.add("--active");
+    track.style.left = sliderIndex * -slider.offsetWidth + 'px'
+    console.log("slide")
 }
 
 
 next.addEventListener('click', ()=>{
     dots[sliderIndex].classList.remove("--active");
     sliderIndex++
-    console.log(sliderIndex)
-    if(sliderIndex > items.length -1){
-        sliderIndex = 0
-        dots[sliderIndex].classList.add("--active");
-    }else{
-        
-        dots[sliderIndex].classList.add("--active");
-    }
-    slide(sliderIndex * -slider.offsetWidth)
+    slide()
 })
 
 
 prev.addEventListener('click', ()=>{
     dots[sliderIndex].classList.remove("--active");
     sliderIndex--
-    console.log(sliderIndex)
-    if( sliderIndex < 0 ){
-        
-        sliderIndex = 3;
-        dots[sliderIndex].classList.add("--active");
-    }else{
-        
-        
-        dots[sliderIndex].classList.add("--active");
-    }
-    console.log(sliderIndex * slider.offsetWidth)
-    slide(sliderIndex * -slider.offsetWidth)
+    slide()
 })
 
 
@@ -62,7 +52,7 @@ dots.forEach((dot, index)=>{
             dots[sliderIndex].classList.remove("--active");
             sliderIndex = index;
             dots[sliderIndex].classList.add("--active");
-            slide(index * -slider.offsetWidth)
+            slide()
         })
         
     })
@@ -71,56 +61,40 @@ dots.forEach((dot, index)=>{
 track.ondragstart = () => false;
 
 const moveEvent = (e)=> {
+    if(dragging){
 
-    // console.log("eventMove", e.clientX, old)
-    // if(e.clientX > old){
-    //     
-    //     old = e.clientX
-    // }
-    // if(e.clientX < old){
-    //     sliderIndex--
-    //     old = e.clientX
-    // }
-    
-    let offset = e.clientX - slider.getBoundingClientRect().left
-    const point = 50
-    let curr = e.clientX - old   
-    console.log(curr, point)
-
-    if(curr >= point){
-        console.log("right", curr) 
-        sliderIndex++ 
+        console.log("move")
+        dots[sliderIndex].classList.remove("--active");
+        if(e.clientX > old){
+            sliderIndex--
+            old = e.clientX
+        }
+        if(e.clientX < old){
+            sliderIndex++
+            old = e.clientX
+            
+        }
+        slide()
+        endEvent()
     }
-    if(curr<= -point){
-        console.log("left", offset)
-        sliderIndex--       
-    }
-    slide(sliderIndex * -slider.offsetWidth)
 
-    endEvent()
 }
 const startEvent = (e)=>{
     console.log("eventStarted")
-    
-    // track.addEventListener('touchmove', moveEvent)
-    track.addEventListener('pointerdown', moveEvent)
+    dragging = true
+    old = e.clientX
+    track.addEventListener('pointermove', moveEvent)
 }
 const endEvent = ()=>{
+    dragging = false
     console.log("event ended")
-    document.removeEventListener('touchmove', moveEvent);
-    document.removeEventListener('mousemove', moveEvent);
-    document.removeEventListener('touchend', endEvent);
+    document.removeEventListener('pointermove', moveEvent);
     document.removeEventListener('pointerup', endEvent);
 }
 
-track.addEventListener('touchstart', startEvent);
 track.addEventListener('pointerdown', startEvent);
-
-track.addEventListener('touchend', endEvent);
 track.addEventListener('pointerup', endEvent);
 
 
 
 
-
-track.addEventListener

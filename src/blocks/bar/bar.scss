@@ -144,3 +144,17 @@
         }
     }
 }
+@media(max-width:768px){
+    .bar{
+        &_main__item{
+            padding: 25px;
+            &:nth-child(2){display: none;}
+        }
+    }
+    #news{
+        .bar_main__item{
+            padding: 20px 10px;
+        }
+    }
+
+}

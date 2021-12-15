@@ -89,11 +89,12 @@
         width: 355px;
         height: 175px;
         &_track{
-            &__item img{
+            &__item, &__item img{
                 width: 355px;
                 height: 175px; 
             }
         }
+        &__pointer{display: none;}
     }
    
 }
