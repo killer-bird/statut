@@ -1,12 +1,9 @@
 .slider
 {
+    max-width: 750px;
+    height: 350px;
     position: relative;
-    margin-bottom: 24px;
-    display: flex;
     overflow: hidden;
-    width: 750px;
-    height: 357px; 
-    
     
     &_track{
         position: absolute;
@@ -16,7 +13,7 @@
         &__item 
         {   
             border-radius: 5px;
-            
+            min-width: 750px;
             max-width: 750px;
             height: 350px;
             & img{border-radius: 5px;}
