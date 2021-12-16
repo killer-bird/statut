@@ -59,3 +59,13 @@
         flex-direction: column;
     }
 }
+@media(max-width:375px){
+    .features{
+        &_item{
+            width: 355px;
+            &__content{
+                margin-left: 125px;
+            }
+        }
+    }
+}

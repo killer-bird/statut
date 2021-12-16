@@ -1,12 +1,16 @@
 .promo
-{
-    display: flex;
-    flex-wrap: wrap;
+{   
+    display: column;
+    column-count: 2;
     
+    &>*{
+        break-inside: avoid;
+    }
     
     &_bookOfDay
     {
         width: 360px;
+        
         margin-left: auto;
         padding: 20px;
         background: #fff;
@@ -37,10 +41,12 @@
     }
     &_promotions
     {
+        float: left;
         display: flex;
         &__item
         {
             @include gosha();
+           
             position: relative;
             display: flex;
             align-items: center;
@@ -122,4 +128,15 @@
         }
     }
 
+}
+@media (max-width:375px) {
+    .promo{
+        &_bookOfDay{display: none;}
+        &_promotions{
+            &__item{
+                padding: 0 20px;
+                width: 355px;
+            }
+        }
+    }
 }

@@ -96,7 +96,6 @@
                
                 & img{
                     max-width: 413px;
-                    flex-shrink: 1;
                     height: 205px;
                 } 
             }
@@ -104,4 +103,24 @@
         &__pointer{display: none;}
     }
    
+}
+@media(max-width:375px){
+    .slider{
+        max-width: 355px;
+        height: 175px;
+        &_track{
+            &__item{
+                max-width: 355px;
+                min-width: 355px;
+                height: 175px;
+               
+               
+                & img{
+                    max-width: 355px;
+                      
+                    height: 175px;
+                } 
+            }
+        }
+    }
 }

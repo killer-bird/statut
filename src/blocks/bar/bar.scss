@@ -158,3 +158,29 @@
     }
 
 }
+@media(max-width:375px){
+    .bar{
+        width: 355px;
+        &_main__item{
+            
+            &:first-child{
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            &:last-child{
+                padding-right: 10px;
+                padding-left: 10px;
+                .bookCard{
+                    .recommendations{
+                        visibility: hidden;
+                    }
+                }
+            }
+        }
+    }
+    #news{
+        .bar_main__item{
+            padding: 20px 10px;
+        }
+    }
+}
