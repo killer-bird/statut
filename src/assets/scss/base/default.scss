@@ -319,17 +319,18 @@ width: 100%;
     }
     @media(max-width:375px){
         .container{
-            max-width: 355px;
+            max-width: 355px;   
         }
         section{
-            margin: 10px 0;
+            margin: 0;
+            margin-bottom: 10px;
         }
         .bookCard{
             width: fit-content;
             
             &__image{
-                width: fit-content;
                 margin: 0 auto;
+                margin-bottom: 10px;
                 & img{
                     width: 126px;
                     height: 180px;
@@ -338,10 +339,15 @@ width: 100%;
             
             &_info{
                 display: inline-block;
-                &__section{display: inline-block;}
+                margin-bottom: 5px;
+                &__section{
+                    display: inline-block;
+                    margin-bottom: 5px;
+                }
                 &__name{
                     display: inline-block;
                     min-width: fit-content;
+                    margin-bottom: 5px; 
                 }
                 &__author{
                     display: inline-block;

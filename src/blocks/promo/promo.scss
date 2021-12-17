@@ -14,7 +14,7 @@
         width: 360px;
         grid-column-start: 2;
         grid-row-start: 1;
-        grid-row-end: 3;
+        grid-row-end: span 2;
         margin-left: auto;
         padding: 20px;
         background: #fff;
@@ -98,48 +98,86 @@
     
 }
 
-@media(max-width:1200px){
-    .promo{
+// @media(max-width:1200px){
+//     .promo{
 
-        &_bookOfDay{
-            width: 250px;
-            margin-left: auto;
-            padding: 10px;
-            background: #fff;
-            -webkit-border-radius: 5px;
-            border-radius: 5px;
+//         &_bookOfDay{
+//             width: 250px;
+//             margin-left: auto;
+//             padding: 10px;
+//             background: #fff;
+//             -webkit-border-radius: 5px;
+//             border-radius: 5px;
         
-        }
-    }
-}
-@media(max-width:1024px){
-    .promo{
-        .left{margin-bottom: 30px;}
-        &_bookOfDay{
+//         }
+//     }
+// }
+// @media(max-width:1024px){
+//     .promo{
+//         .left{margin-bottom: 30px;}
+//         &_bookOfDay{
             
-            width: 750px;
-            margin: 0;
-        }
-    }
-}
-@media(max-width:768px){
-    .promo{
-        &_promotions{
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            &__item:last-child{margin-left: 0;}
-        }
-    }
+//             width: 750px;
+//             margin: 0;
+//         }
+//     }
+// }
+// @media(max-width:768px){
+//     .promo{
+//         &_promotions{
+//             flex-direction: column;
+//             align-items: center;
+//             gap: 10px;
+//             &__item:last-child{margin-left: 0;}
+//         }
+//     }
 
-}
+// }
 @media (max-width:375px) {
     .promo{
-        &_bookOfDay{display: none;}
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+       
+        &_bookOfDay{
+            width: 355px;
+            padding: 20px 20px 14px;
+            .bookCard{
+                &__image {
+                    margin-bottom: 10px;
+                    & img {
+                        width: 133px;
+                        height: 200px;
+                    }
+                }
+                &_info{
+                    margin-bottom: 2px;
+                    &__section{margin-bottom: 5px;}
+                    &__name{margin-bottom: 5px;}
+                }
+                &__buttons{
+                    &__item{
+                        &:first-child{
+                            margin-right: 10px;
+                            width: 265px;
+                        }
+                        
+                    }
+                    .--small{
+                        width: 40px;
+                        height: 40px;   
+                    }
+                }
+            }
+          
+        }
+        
         &_promotions{
+           flex-direction: column;
             &__item{
                 padding: 0 20px;
                 width: 355px;
+                &:first-child{margin-bottom: 10px;}
             }
         }
     }
