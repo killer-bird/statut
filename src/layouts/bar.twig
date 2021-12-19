@@ -15,7 +15,9 @@
         {% if block("footer") is defined %}
             <div class="bar_footer">
                 <a href="#">{% block footer %}{% endblock %}</a>
+                <a  href="#">{% block footer_mobile %}{% endblock %}</a>
             </div>
+            
         {% endif %}
     </div>
 </section>
