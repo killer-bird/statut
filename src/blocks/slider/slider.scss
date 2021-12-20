@@ -105,6 +105,9 @@
     .slider{
         max-width: 355px;
         height: 175px;
+        &__dots{
+            bottom: 10px;
+        }
         &_track{
             &__item{
                 max-width: 355px;

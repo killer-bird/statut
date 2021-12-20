@@ -192,7 +192,11 @@
     }
     #news{
         .bar_main__item{
-            padding: 20px 10px;
+            padding: 19px 10px 12px;
+        }
+        .bar_footer{
+            display: block;
+            a:first-child{display: block;}
         }
     }
 }

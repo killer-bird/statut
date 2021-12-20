@@ -277,33 +277,100 @@ width: 100%;
         margin: 0 auto;
     }
 }
-
-@media (max-width: 1200px){
-    .container
-    {
-        max-width: 1024px;
-       
-       
-    }
-}   
-@media(max-width:1024px){
-    .container
-    {
-        max-width: 750px;
-
+.dropdown{
+    position: relative;
+    &::after{
+        content: "";
+        border: solid $color50;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 4px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        position: absolute;
+        cursor: pointer;
     }
 }
-@media(max-width:768px){
-    .container{
 
-        max-width: 500px;
+// @media (max-width: 1200px){
+//     .container
+//     {
+//         max-width: 1024px;
+       
+       
+//     }
+// }   
+// @media(max-width:1024px){
+//     .container
+//     {
+//         max-width: 750px;
+
+//     }
+// }
+// @media(max-width:768px){
+//     .container{
+
+//         max-width: 500px;
+//     }
+//     .bookCard{
+//         width: 177px;
+//         &_info{
+//             &__name{
+//                 &__full{display: none;}
+//                 &__short{display: inline-block;}
+//             }
+//         }
+//         &__rate{
+//             height: 60px;
+//             flex-direction: column;
+            
+//             justify-content: space-between;
+//             gap: 8px;
+//             margin-bottom: 10px;
+//             &>*{flex: 1;}
+            
+//         }
+//     }
+    
+// }
+@media(max-width:375px){
+    .container{
+        max-width: 355px;   
+    }
+    section{
+        margin: 0;
+        margin-bottom: 10px;
     }
     .bookCard{
-        width: 177px;
+        width: fit-content;
+        
+        &__image{
+            margin: 0 auto;
+            margin-bottom: 10px;
+            & img{
+                width: 126px;
+                height: 180px;
+            }
+        }
+        
         &_info{
+            display: inline-block;
+            margin-bottom: -6px;
+            &__section{
+                display: inline-block;
+                margin-bottom: 5px;
+            }
             &__name{
                 &__full{display: none;}
                 &__short{display: inline-block;}
+                min-width: fit-content;
+                margin-bottom: 5px; 
+            }
+            &__author{
+                display: inline-block;
+            }
+            &__price{
+                width: fit-content;
             }
         }
         &__rate{
@@ -314,64 +381,30 @@ width: 100%;
             gap: 8px;
             margin-bottom: 10px;
             &>*{flex: 1;}
-            
         }
-    }
-    @media(max-width:375px){
-        .container{
-            max-width: 355px;   
-        }
-        section{
-            margin: 0;
-            margin-bottom: 10px;
-        }
-        .bookCard{
-            width: fit-content;
-            
-            &__image{
-                margin: 0 auto;
-                margin-bottom: 10px;
-                & img{
-                    width: 126px;
-                    height: 180px;
-                }
-            }
-            
-            &_info{
-                display: inline-block;
-                margin-bottom: -6px;
-                &__section{
-                    display: inline-block;
-                    margin-bottom: 5px;
-                }
-                &__name{
-                    display: inline-block;
-                    min-width: fit-content;
-                    margin-bottom: 5px; 
-                }
-                &__author{
-                    display: inline-block;
-                }
-                &__price{
-                    width: fit-content;
-                }
-            }
-            &__buttons{
-                & button:nth-child(1){margin-right: 5px;}
-                &__item{
-                    width: 117px;
-                    height: 35px;
-                    
-                }
+        &__buttons{
+            & button:nth-child(1){margin-right: 5px;}
+            &__item{
+                width: 117px;
+                height: 35px;
+                
             }
         }
-        .newsCard{
-            &__button{width: 100%;}
-        }
-        .--small{
-            width: 35px;
-            height: 35px;
-        }
     }
+    .newsCard{
+        &__button{width: 100%;}
+        &__img{
+            & img{
+                width: 335px;
+                height: 210px;
+            }
+        }
+       
     }
+    
+    .--small{
+        width: 35px;
+        height: 35px;
+    }
+}
     

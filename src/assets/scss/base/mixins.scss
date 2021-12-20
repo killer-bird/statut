@@ -21,7 +21,8 @@
       @if $direction == left{
           transform: translate(-50%, -50%) rotate(135deg);
           -webkit-transform: translate(-50%, -50%) rotate(135deg);
-      }@else{
+      }
+      @else{
           transform:translate(-50%, -50%) rotate(-45deg);
           -webkit-transform: translate(-50%, -50%) rotate(-45deg);
       }
