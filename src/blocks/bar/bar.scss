@@ -145,20 +145,63 @@
 //         }
 //     }
 // }
-// @media(max-width:768px){
-//     .bar{
-//         &_main__item{
-//             padding: 25px;
-//             &:nth-child(2){display: none;}
-//         }
-//     }
-//     #news{
-//         .bar_main__item{
-//             padding: 20px 10px;
-//         }
-//     }
+@media(max-width:768px){
+    .bar{
+        &_main__item{
+            padding: 25px;
+            &:nth-child(2){display: none;}
+        }
+    }
+    #news{
+        .bar_main__item{
+            padding: 20px 10px;
+        }
+    }
 
-// }
+}
+@media(max-width:425px){
+    .bar{
+        width: 385px;
+        &_header{
+            padding: 18px 10px 8px;
+        }
+        &_main__item{
+            width: 50%;
+            padding: 20px 10px 14px;
+            &:nth-child(2), &:nth-child(3){display: none;}
+            &:first-child{padding-left: 10px;}
+            &:last-child{
+                padding-top: 25px;
+                padding-left: 15px;
+                padding-right: 15px;
+
+                .bookCard{
+                    .recommendations{
+                        visibility: hidden;
+                    }
+                }
+            }
+        }
+        &_footer{
+            padding: 10px 0;
+            a{
+                margin: 0 auto;
+                &:first-child{display: none;}
+                &:last-child{display: block;}
+            }
+        }
+    }
+    #news{
+        .bar_main__item{
+            width: 100%;
+            padding: 19px 20px 12px;
+        }
+        .bar_footer{
+            display: block;
+            a:first-child{display: block;}
+        }
+    }
+}
 @media(max-width:375px){
     .bar{
         width: 355px;

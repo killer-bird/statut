@@ -101,6 +101,29 @@
     }
    
 }
+@media(max-width:425px){
+    .slider{
+        max-width: 385px;
+        height: 195px;
+        &__dots{
+            bottom: 10px;
+        }
+        &_track{
+            &__item{
+                max-width: 385px;
+                min-width: 385px;
+                height: 195px;
+               
+               
+                & img{
+                    max-width: 385px;
+                      
+                    height: 195px;
+                } 
+            }
+        }
+    }
+}
 @media(max-width:375px){
     .slider{
         max-width: 355px;

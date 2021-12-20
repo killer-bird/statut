@@ -162,7 +162,106 @@
 //     }
 
 // }
+@media(max-width:425px){
+    .footer{
+        margin-top: 20px;
+        &_top__wrapper
+         {
+            display: block; 
+            padding-bottom: 0;
+        }
+        &_top__mobile__wrapper{
+            border-bottom: 1px solid $color15;
+        }
+        
+        &_top__inner, &_main, &_bottom{display: none;}
+        
+        &_top__inner__mobile{
+            display: block;
+            color: rgba(28, 41, 77, 0.05);
+        }
+        &_top__socials__mobile
+        {
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid $color15;
+            padding-bottom: 11px;
+            &__item{
+                margin-right: 15px;
+                &:last-child{margin: 0;}
+            }
+        }
+        &_top{
+            display: flex;
+            
+            padding: 20px 10px 13px;
+            &__logo{margin-right: 15px;}
+            &__form{display: none;}
+            &__form__mobile{
+                display: flex;
+                position: relative;
+                &__email{
+                    width: 270px;
+                }
+                &__submit{
+                    position: absolute;
+                    right: 0;
+                    width: 50px;
+                    height: 40px;
+                }
+            }
+        }
+        
+        &_main__mobile{
+            display: block;
+            &__list{
+                padding: 0 10px;
+                &-bottom{
+                    display: block;
+                    .footer_main__mobile__list__item{
+                        padding: 19px;
+                        font-size: 14px;
+                        &:first-child{
+                            border-top: 1px solid $color50;
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        .icon{display: inline-block;}
+                        &__text{
+                            color: $color50;
+                            display: inline-block;
+                            font-size: 14px;
+                            line-height: 20px;
+                            margin-bottom: 10px;
+                            &:last-child{margin-bottom: 0;}
+                        }
+                    }
+                }
+                .dropdown{
+                    width: 100%;
+                    &::after{
+                        right: 4px;
+                        top: 22px;
+                    }
+                }
+                &__item{
+                    
+                    padding: 20px 0 16px;
+                    border-bottom: 1px solid rgba(42, 61, 72, 0.15);
+                    &:last-child{border-bottom: none}
+                    & a{
+                        color: #2A3D48;
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
 
+                }
+            }
+            
+
+        }
+    }
+}
 @media(max-width:375px){
 .footer{
         margin-top: 20px;

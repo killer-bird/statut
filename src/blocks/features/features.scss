@@ -63,6 +63,32 @@
 //         flex-direction: column;
 //     }
 // }
+@media(max-width:425px){
+    .features{
+        gap: 15px;
+        flex-direction: column;
+        &_item{
+            height: 170px;
+            width: 385px;
+            &:nth-child(2){order:4;}
+            
+            &__img{
+               
+                & img{
+                    width: 147px;
+                    height: 90px;
+                }
+            }
+            &__content{
+                margin-left: 125px;
+                &__text{
+                    &__full{display: none;}
+                    &__mobile{display: inline-block;}
+                }
+            }
+        }
+    }
+}
 @media(max-width:375px){
     .features{
         gap: 10px;
