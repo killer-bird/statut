@@ -83,28 +83,80 @@
 }
 @media(max-width:768px){
     .slider{
-        max-width: 413px;
-        height: 205px;
+        min-width: 668px;
+        max-width: 668px;
+        height: 325px;
         &_track{
             &__item{
-                min-width: 413px;
+                min-width: 668px;
+                height: 325px;
+               
+               
+                & img{
+                    max-width: 668px;
+                    height: 325px;
+                } 
+            }
+        }
+        
+    }
+   
+}
+@media(max-width:1024px){
+    .slider{
+        max-width: 605px;
+        min-width: 605px;
+        height: 295px;
+        &__dots{
+            bottom: 10px;
+        }
+        &_track{
+            &__item{
+                max-width: 605px;
+                min-width: 605px;
+                height: 295px;
+               
+               
+                & img{
+                    max-width: 605px;
+                    height: 295px;
+                } 
+            }
+        }
+    }
+
+}
+@media(max-width:668px){
+    .slider{
+        max-width: 425px;
+        height: 205px;
+        min-width: 425px;
+        &__pointer{display: none;}
+        &__dots{
+            bottom: 10px;
+        }
+        &_track{
+            &__item{
+                max-width: 425px;
+                min-width: 425px;
                 height: 205px;
                
                
                 & img{
-                    max-width: 413px;
+                    max-width: 425px;
                     height: 205px;
                 } 
             }
         }
-        &__pointer{display: none;}
     }
-   
+
 }
 @media(max-width:425px){
     .slider{
         max-width: 385px;
         height: 195px;
+        min-width: 385px;
+        &__pointer{display: none;}
         &__dots{
             bottom: 10px;
         }
@@ -127,6 +179,7 @@
 @media(max-width:375px){
     .slider{
         max-width: 355px;
+        min-width: 355px;
         height: 175px;
         &__dots{
             bottom: 10px;

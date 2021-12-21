@@ -1,3 +1,19 @@
+html,
+body {
+  height: 100%;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+main{
+    flex: 1 0 auto;
+
+}
+.footer{
+    flex: 0 0 auto;
+}
 .container
 {
 	max-width: 1140px;
@@ -9,8 +25,8 @@
 }
 
 section{
-margin: 30px 0;
-width: 100%;
+    margin: 30px 0;
+    width: 100%;
 }
 
 
@@ -292,21 +308,27 @@ width: 100%;
     }
 }
 
-// @media (max-width: 1200px){
-//     .container
-//     {
-//         max-width: 1024px;
+@media (max-width: 1200px){
+    .container
+    {
+        max-width: 1024px;
        
        
-//     }
-// }   
-// @media(max-width:1024px){
-//     .container
-//     {
-//         max-width: 750px;
+    }
+}   
+@media(max-width:1024px){
+    .container
+    {
+        max-width: 824px;
 
-//     }
-// }
+    }
+    .bookCard{
+        margin: 0 auto;
+    }
+    .newsCard{
+        margin: 0 auto;
+    }
+}
 @media(max-width:768px){
     .container{
 
@@ -331,7 +353,89 @@ width: 100%;
             
         }
     }
+    .newsCard{
+        &__img{
+            
+            & img{
+                width: 300px;
+                height: 180px;
+            }
+        }
+    }
+}
+@media(max-width:668px){
+    .container{
+        max-width: 425px;
+    }
+    section{
+        margin: 0;
+        margin-bottom: 15px;
+    }
+    .bookCard{
+        width: fit-content;
+        
+        &__image{
+            margin: 0 auto;
+            margin-bottom: 10px;
+            & img{
+                width: 126px;
+                height: 180px;
+            }
+        }
+        
+        &_info{
+            display: inline-block;
+            margin-bottom: -6px;
+            &__section{
+                display: inline-block;
+                margin-bottom: 5px;
+            }
+            &__name{
+                &__full{display: none;}
+                &__short{display: inline-block;}
+                min-width: fit-content;
+                margin-bottom: 5px; 
+            }
+            &__author{
+                display: inline-block;
+            }
+            &__price{
+                width: fit-content;
+            }
+        }
+        &__rate{
+            height: 60px;
+            flex-direction: column;
+            
+            justify-content: space-between;
+            gap: 8px;
+            margin-bottom: 10px;
+            &>*{flex: 1;}
+        }
+        &__buttons{
+            & button:nth-child(1){margin-right: 5px;}
+            &__item{
+                width: 117px;
+                height: 35px;
+                
+            }
+        }
+    }
+    .newsCard{
+        &__button{width: 100%;}
+        &__img{
+            & img{
+                width: 335px;
+                height: 210px;
+            }
+        }
+       
+    }
     
+    .--small{
+        width: 35px;
+        height: 35px;
+    }
 }
 @media (max-width:425px){
     .container{

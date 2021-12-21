@@ -74,6 +74,7 @@ html
             &__text{margin-right: 0;}
             &__form{
                 flex-direction: column;
+                width: 100%;
                 gap: 10px;
                 
                 &__email{
@@ -84,6 +85,9 @@ html
                     width: 100%;
                     justify-content: center;
                 }
+            }
+            &__line{
+                left: 156px;
             }
         }
     }

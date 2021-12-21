@@ -147,6 +147,9 @@ header{
     }
     .--red{ color: #FF283D;}
 }
+@media(max-width:1200px){
+
+}
 @media(max-width:1024px) {
     .header_top{display: none;}
     .header_main{
@@ -158,17 +161,66 @@ header{
     }
 }
 @media(max-width:768px){
-    header{
-        .header_main{
-            display: none;
+   header{
+       margin-bottom: 15px;
+    .header_main, .header_bottom{display: none;}
+
+    .header_main_mobile
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+        width: 100%;
+        
+        &__burger{
+            margin-right: 0;
         }
-        .header_main_mobile{
-            display: flex;
+        &__logo{
+            margin-right: 0;
         }
-        .header_bottom{display: none;}
+        &__search{
+            position: relative;
+            height: 40px;
+            margin-right: 0;
+            &__input{
+                height: 100%;
+                width: 295px;
+                border: transparent;
+                background: #F7F7F7;
+
+            }
+            &__submit{
+                border: none;
+                background: transparent;
+                position: absolute;
+                
+                right: 15px;
+                bottom: 4px;
+            }
+            
+        }
+        &__card{
+            position: relative;
+            .counter{
+                position: absolute;
+                border-radius: 50%;
+                color: #fff;
+                width: 20px;
+                height: 20px;
+                bottom:15px;
+                left:14px;
+                font-size: 14px;
+                font-weight: 500;
+                text-align: center;
+                
+            }
+        }
     }
-   
+   }
 }
+   
+
 @media(max-width:425px){
     header{
         box-shadow: 0 4px 2px -2px#ECECEC;
@@ -228,6 +280,7 @@ header{
         box-shadow: 0 4px 2px -2px#ECECEC;
         margin-bottom: 10px;
         .header_main_mobile{
+            justify-content: flex-start;
             align-items: center;
             padding: 15px 0;
             padding-left: 10px;

@@ -98,46 +98,118 @@
     
 }
 
-// @media(max-width:1200px){
-//     .promo{
-
-//         &_bookOfDay{
-//             width: 250px;
-//             margin-left: auto;
-//             padding: 10px;
-//             background: #fff;
-//             -webkit-border-radius: 5px;
-//             border-radius: 5px;
+@media(max-width:1200px){
+    .promo{
+        grid-template-columns: 750px 250px;
+        &_bookOfDay{
+            width: 250px;
+            margin-left: auto;
+            padding: 10px;
+            background: #fff;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
         
-//         }
-//     }
-// }
-// @media(max-width:1024px){
-//     .promo{
-//         .left{margin-bottom: 30px;}
-//         &_bookOfDay{
+        }
+    }
+}
+
+@media(max-width:1024px){
+    .promo{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+        &_bookOfDay{
+            width: 360px;
             
-//             width: 750px;
-//             margin: 0;
-//         }
-//     }
-// }
+            margin: 0;
+        }
+        &_promotions{
+            min-width: 100%;
+            justify-content: space-between;
+            &__item{
+                &:last-child{
+                    margin-left: 0;
+                    &__line{
+                        bottom: 13px;
+                    }
+                }
+                }
+                
+        }
+    }
+}
 @media(max-width:768px){
     .promo{
+        width: 100%;
         gap: 20px;
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 360px 308px;
+        grid-template-rows: 325px 450px;
         &_promotions{
             flex-direction: column;
-            
-            gap: 10px;
+            grid-row-start: 2;
+            gap: 20px;
             &__item:last-child{margin-left: 0;}
         }
         &_bookOfDay{
+            width: 290px;
             margin-left: 0;
+            grid-row-start: 2;
         }
     }
 
+}
+@media(max-width:668px){
+    .promo{
+        gap: 15px;
+        display: flex;
+        flex-direction: column;
+       
+        &_bookOfDay{
+            width: 100%;
+            padding: 20px 20px 14px;
+            margin-left: 0;
+            .bookCard{
+                &__image {
+                    margin-bottom: 10px;
+                    & img {
+                        width: 133px;
+                        height: 200px;
+                    }
+                }
+                &_info{
+                    margin-bottom: 2px;
+                    &__section{margin-bottom: 5px;}
+                    &__name{margin-bottom: 5px;}
+                }
+                &__buttons{
+                    &__item{
+                        &:first-child{
+                            margin-right: 10px;
+                            width: 285px;
+                        }
+                        
+                        
+                    }
+                    .--small{
+                        width: 40px;
+                        height: 35px;   
+                    }
+                }
+            }
+          
+        }
+        
+        &_promotions{
+           flex-direction: column;
+            &__item{
+                padding: 0 20px;
+                width: 100%;
+                &:first-child{margin-bottom: 0;}
+                &:last-child{margin-left: 0;}
+            }
+        }
+    }
 }
 @media(max-width:425px){
     .promo{
@@ -232,9 +304,11 @@
         
         &_promotions{
            flex-direction: column;
+           gap:0;
             &__item{
                 padding: 0 20px;
                 width: 355px;
+                
                 &:first-child{margin-bottom: 10px;}
             }
         }
